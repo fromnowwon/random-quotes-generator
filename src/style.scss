@@ -1,22 +1,185 @@
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("./asset/font/DungGeunMo.ttf") format("truetype");
+  font-weight: normal;
+} 
+
 body {
+	font-family: DungGeunMo;
 	box-sizing: border-box;
+	background-color: rgb(255, 251, 223);
 }
 
-form {
-	.box {
-		+ .box{
-			margin-top: 1rem;
-		}
+.root {
+	padding: 3rem 1rem;
+}
+
+.title-box {
+	text-align: center;
+	h1 {
+		font-weight: 700;
+		font-size: 2rem;
 	}
-	button {
+	span {
 		display: inline-block;
-		margin-top: 1rem;
-		width: 50px;
-		height: 30px;
-		border: 0;
-		border-radius: 0px;
-		background-color: peachpuff;
+		margin-top: 0.5rem;
+	}
+}
+
+.btn-box {
+	margin-top: 1.5rem;
+	text-align: center;
+	.btn {
+		display: inline-block;
+		padding: 1rem 2rem;
+		border: 1px solid #bbb;
+		background-color: #eee;
+	}
+}
+
+.advice {
+	margin-top: 2rem;
+	p {
+		font-size: 1.25rem;
+		line-height: 1.2;
+		text-align: center;
+	}
+	.ko {
+		margin-top: 0.5rem;
+	}
+}
+
+.loader {
+	margin-top: 3rem;
+	text-align: center;
+	&.inactive {
+		display: none;
+	}
+	&.active {
+		display: block;
+	}
+	.loader__txt {
+		display: inline-block;
+		color: #777;
+		text-transform: uppercase;
+		font-size:1em;
+		letter-spacing:1.5px;
+		text-align:center;
+		width:155px;
+		margin-top:20px;
+		-webkit-animation: fade 2s infinite;
+		-moz-animation: fade 2s infinite;
+	}
+	.stick {
+		width: 30px;
+		height:3px;
+		background:#bbb;
+		display:inline-block;
+		margin-left:-8px;
+	}
+	.stick:nth-child(n) {  
+		transform:rotate(30deg);
+		-ms-transform:rotate(30deg); /* IE 9 */
+		-webkit-transform:rotate(30deg); /* Safari and Chrome */
+		 -moz-transform:rotate(30deg);
+		 -webkit-animation: fall 2s infinite;
+		 -moz-animation: fall 2s infinite;
+	
+	}
+	.stick:nth-child(2n) {  
+		transform:rotate(-30deg);
+		-ms-transform:rotate(-30deg); /* IE 9 */
+		-webkit-transform:rotate(-30deg); /* Safari and Chrome */
+		-moz-transform:rotate(-30deg);
+		-webkit-animation: rise 2s infinite;
+		-moz-animation: rise 2s infinite;
 	}
 }
 
 
+
+
+
+@-webkit-keyframes rise {
+  50% { 
+		transform:rotate(30deg);
+		-ms-transform:rotate(30deg); /* IE 9 */
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+@-moz-keyframes rise {
+ 50% { 
+		transform:rotate(30deg);
+		-ms-transform:rotate(30deg); /* IE 9 */
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+@-o-keyframes rise {
+  50% { 
+		transform:rotate(30deg);
+		-ms-transform:rotate(30deg); /* IE 9 */
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+@keyframes rise {
+  50% { 
+		transform:rotate(30deg);
+		-ms-transform:rotate(30deg); /* IE 9 */
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+
+@-webkit-keyframes fall {
+  50% { 
+		transform:rotate(-30deg);
+		-ms-transform:rotate(-30deg); /* IE 9 */
+		-webkit-transform:rotate(-30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+@-moz-keyframes fall {
+ 50% { 
+	 transform:rotate(-30deg);
+  -ms-transform:rotate(-30deg); /* IE 9 */
+  -webkit-transform:rotate(-30deg);
+  -moz-transform:rotate(-30deg); 
+ }
+}
+@-o-keyframes fall {
+  50% { transform:rotate(-30deg);
+  -ms-transform:rotate(-30deg); /* IE 9 */
+  -webkit-transform:rotate(-30deg);
+   -moz-transform:rotate(30deg); 
+  }
+}
+@keyframes fall {
+  50% { 
+		transform:rotate(-30deg);
+		-ms-transform:rotate(-30deg); /* IE 9 */
+		-webkit-transform:rotate(-30deg);
+		-moz-transform:rotate(30deg); 
+	}
+}
+
+@-webkit-keyframes fade {
+	50%{opacity:0.5}
+	100%{opacity:1}
+	;}
+@-moz-keyframes fade {
+50%{opacity:0.5}
+	100%{opacity:1}
+}
+
+@-o-keyframes fade {
+	50%{opacity:0.5}
+	100%{opacity:1}
+}
+
+@keyframes fade {
+	50%{opacity:0.5}
+	100%{opacity:1}
+}

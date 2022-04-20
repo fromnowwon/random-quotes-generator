@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
 	mode: 'production',
@@ -10,12 +11,13 @@ module.exports = {
 	plugins: [
     // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
     new MiniCssExtractPlugin({ 
-			filename: 'css/style.css' 
+			filename: 'css/style.css',
 		}),
 		new HtmlWebpackPlugin({
       template: "./index.html" // index.html을 기본 템플릿으로 반영할 수 있도록 설정
     }),
-		new CleanWebpackPlugin() // 불필요한 build 파일 삭제
+		new CleanWebpackPlugin(), // 불필요한 build 파일 삭제
+		new Dotenv(), // 환경변수
   ],
 	module: {
 		rules: [
@@ -27,7 +29,7 @@ module.exports = {
 			{
 				test:  /\.s[ac]ss$/i,
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-				exclude: /node_modules/
+				exclude: /node_modules/,
 			}
 		]
 	},
@@ -46,6 +48,6 @@ module.exports = {
 		static: {
 			directory: path.resolve(__dirname, 'public')
 		},
-		port: 8080
+		port: 5000
 	}
 }

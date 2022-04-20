@@ -1,3 +1,13 @@
-# webpack-typescript-tutorial
+# 랜덤 명언 생성기 (Random advice generator)
 
-Webpack, HTML, TypeScript, SCSS
+## Introduce
+
+
+<br />
+
+## 
+
+
+
+<br />
+
