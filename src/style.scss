@@ -11,7 +11,17 @@ body {
 }
 
 .root {
-	padding: 3rem 1rem;
+	max-width: 700px;
+	height: 100vh;
+	margin: auto;
+	padding: 2rem 1rem;
+}
+
+.content {
+	height: 100%;
+	padding: 2rem 1rem;
+	border: 1px solid #eee;
+	background-color: rgba(255,255,255,0.5);
 }
 
 .title-box {
@@ -26,14 +36,32 @@ body {
 	}
 }
 
-.btn-box {
+.gen-btn-box {
 	margin-top: 1.5rem;
 	text-align: center;
-	.btn {
+	.gen-btn {
 		display: inline-block;
-		padding: 1rem 2rem;
+		padding: 0.25rem;
 		border: 1px solid #bbb;
 		background-color: #eee;
+		font-size: 1.25rem;
+	}
+}
+
+.copy-btn-box {
+	margin-top: 2rem;
+	text-align: center;
+	&.inactive {
+		display: none;
+	}
+	&.active {
+		display: block;
+	}
+	.copy-btn {
+		padding: 0.25rem;
+		border: 1px solid #bbb;
+		background-color: #eee;
+		font-size: 0.875rem;
 	}
 }
 
@@ -72,10 +100,10 @@ body {
 	}
 	.stick {
 		width: 30px;
-		height:3px;
-		background:#bbb;
-		display:inline-block;
-		margin-left:-8px;
+		height: 3px;
+		background: #bbb;
+		display: inline-block;
+		margin-left: -5px;
 	}
 	.stick:nth-child(n) {  
 		transform:rotate(30deg);
@@ -84,7 +112,6 @@ body {
 		 -moz-transform:rotate(30deg);
 		 -webkit-animation: fall 2s infinite;
 		 -moz-animation: fall 2s infinite;
-	
 	}
 	.stick:nth-child(2n) {  
 		transform:rotate(-30deg);
@@ -95,10 +122,6 @@ body {
 		-moz-animation: rise 2s infinite;
 	}
 }
-
-
-
-
 
 @-webkit-keyframes rise {
   50% { 
