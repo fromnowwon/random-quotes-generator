@@ -13,6 +13,8 @@
 - Go quotes : 영문 명언을 렌덤으로 가져올 수 있는 API
 - Kakao 번역 API : 번역 API
 
+<br />
+
 ## Development Environment
 - Client: Vanilla JavaScript, TypeScript, SCSS
 
