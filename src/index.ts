@@ -30,7 +30,6 @@ $btn.addEventListener("click", () => {
 	$copyBtnBox.classList.add('inactive');
 
 	
-
 	// 명언 가져오기
 	fetchQuotes()
 		.then(res => {
@@ -43,18 +42,19 @@ $btn.addEventListener("click", () => {
 			
 			let [ quotes ] = res.quotes;
 			let text = quotes.text;
-			let author = quotes.author;
-			
+			let author = `-${quotes.author}-`;
+
+			console.log(quotes);
+
 			// 한글 번역
-			translation(text, author)
+			translation(text)
 				.then(res => {
+					console.log(res);
 					let [ list ] = res.translated_text;
-					let [ sentences ] = list;
-					let t = sentences.split('-')[0];
-					let a = sentences.split('-')[1];
+					let koText = list.join(' ')
 					
-					$ko.innerHTML = `${t} </br> -${a}-`;
-					$en.innerHTML = `${text} </br> -${author}-`;
+					$en.innerHTML = `${text} <br/> ${author}`;
+					$ko.innerHTML = `${koText} <br/> ${author}`;
 
 					bull = true;
 					$btn.disabled = false; // 버튼 활성화

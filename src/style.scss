@@ -2,17 +2,19 @@
   font-family: "DungGeunMo";
   src: url("./asset/font/DungGeunMo.ttf") format("truetype");
   font-weight: normal;
-} 
+}
+
+$main-color: #eee;
 
 body {
 	font-family: DungGeunMo;
 	box-sizing: border-box;
-	background-color: rgb(255, 251, 223);
+	background-color: rgb(255, 249, 164);
 }
 
 .root {
 	max-width: 700px;
-	height: 100vh;
+	// height: 100vh;
 	margin: auto;
 	padding: 2rem 1rem;
 }
@@ -20,8 +22,7 @@ body {
 .content {
 	height: 100%;
 	padding: 2rem 1rem;
-	border: 1px solid #eee;
-	background-color: rgba(255,255,255,0.5);
+	// background-color: rgba(255,255,255,0.5);
 }
 
 .title-box {
@@ -66,6 +67,8 @@ body {
 }
 
 .quotes {
+	// max-height: 300px;
+	// overflow-y: scroll;
 	margin-top: 2rem;
 	p {
 		font-size: 1.25rem;
@@ -74,8 +77,6 @@ body {
 	}
 	.ko {
 		margin-top: 1rem;
-		padding-top: 1rem;
-		border-top: 1px solid #eee;
 	}
 }
 
@@ -207,4 +208,24 @@ body {
 @keyframes fade {
 	50%{opacity:0.5}
 	100%{opacity:1}
+}
+
+/* Mobile - Landscape */
+@media (min-width: 576px) {
+
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+
+}
+
+/* Desktop (Large) */
+@media (min-width: 1200px) {
+
 }

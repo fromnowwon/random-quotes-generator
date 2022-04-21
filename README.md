@@ -1,6 +1,11 @@
 # 랜덤 명언 생성기 (Random quotes generator)
 
-📎 [Demo]()
+📎 [Demo](https://fromnowwon.github.io/random-quotes-generator/)
+
+![](./src/asset/images/random-quotes-generator-16_9.mp4)
+
+
+<br />
 
 ## Introduce
 - 생성 버튼을 클릭하면 랜덤으로 명언이 생성됩니다.

@@ -43,7 +43,7 @@ module.exports = {
 		// 현재 경로를 기준으로 public (빌드 폴더) 경로를 적는다
 		path: path.resolve(__dirname, 'public'),
 	},
-	devServer: {
+	devServer: {// 코드 변경 감지
 		// 개발 서버가 dist 폴더를 제공할 수 있도록 설정
 		static: {
 			directory: path.resolve(__dirname, 'public')
