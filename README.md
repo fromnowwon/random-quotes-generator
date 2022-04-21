@@ -20,7 +20,7 @@
 
 ## Tree
 ```
-random-advice-generator
+random-quotes-generator
 ├── index.html
 ├── public (배포용 폴더)
 ├── src
