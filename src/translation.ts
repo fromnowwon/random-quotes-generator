@@ -12,6 +12,4 @@ export async function translation (text: string) {
 	)
 		.then((res) => res.json())
 		.catch((error) => error);
-	
-	
 }
