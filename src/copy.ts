@@ -1,8 +1,11 @@
 export function copy_to_clipboard(ele: HTMLElement) {
+	// 태그 제거
+	let text = ele.innerHTML.replace(/(<([^>]+)>)/ig,"");
+
 	// 임시 텍스트 입력란
 	const aux = document.createElement('input');
 	// 임시 텍스트 입력란 value 값을 복사할 요소의 innerHTML로 지정
-	aux.setAttribute('value', ele.innerHTML);
+	aux.setAttribute('value', text);
 	// body의 자식 요소로 붙여넣기
 	document.body.appendChild(aux);
 	// 해당 내용 강조

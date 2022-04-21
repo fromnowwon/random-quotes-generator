@@ -65,7 +65,7 @@ body {
 	}
 }
 
-.advice {
+.quotes {
 	margin-top: 2rem;
 	p {
 		font-size: 1.25rem;
@@ -73,7 +73,9 @@ body {
 		text-align: center;
 	}
 	.ko {
-		margin-top: 0.5rem;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid #eee;
 	}
 }
 

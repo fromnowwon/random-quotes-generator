@@ -1,7 +1,7 @@
 import './reset.scss'
 import './style.scss'
 
-import { fetchAdvice } from './fetchAdvice'
+import { fetchQuotes } from './fetchQuotes'
 import { translation } from './translation';
 import { copy_to_clipboard } from './copy';
 
@@ -29,20 +29,32 @@ $btn.addEventListener("click", () => {
 	$copyBtnBox.classList.remove('active');
 	$copyBtnBox.classList.add('inactive');
 
+	
+
 	// 명언 가져오기
-	fetchAdvice()
+	fetchQuotes()
 		.then(res => {
+			if (res.message != "success") {
+				alert(res.message);
+			}
+
 			$loader.classList.remove('active');
 			$loader.classList.add('inactive');
 			
-			$en.innerHTML = res.slip.advice
+			let [ quotes ] = res.quotes;
+			let text = quotes.text;
+			let author = quotes.author;
 			
 			// 한글 번역
-			translation(res.slip.advice)
+			translation(text, author)
 				.then(res => {
 					let [ list ] = res.translated_text;
 					let [ sentences ] = list;
-					$ko.innerHTML = sentences;
+					let t = sentences.split('-')[0];
+					let a = sentences.split('-')[1];
+					
+					$ko.innerHTML = `${t} </br> -${a}-`;
+					$en.innerHTML = `${text} </br> -${author}-`;
 
 					bull = true;
 					$btn.disabled = false; // 버튼 활성화
