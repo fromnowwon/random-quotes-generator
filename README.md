@@ -2,7 +2,7 @@
 
 📎 [Demo](https://fromnowwon.github.io/random-quotes-generator/)
 
-![](./src/asset/images/random-quotes-generator-16_9.mp4)
+![](./src/asset/images/random-quotes-generator-16_9.gif)
 
 
 <br />
@@ -32,8 +32,9 @@ random-quotes-generator
 ├── public (배포용 폴더)
 ├── src
 │   ├── asset (정적 자원 관리)
-│   │   └── font (폰트)
-│   │       └── DungGeunMo.ttf
+│   │   ├── font (폰트)
+│   │   │   └── DungGeunMo.ttf
+│   │   └── images (이미지)
 │   ├── index.ts (Entry point)
 │   ├── copy.ts (클립보드 복사 모듈)
 │   ├── fetchQuotes.ts (명언 가져오기 모듈)
