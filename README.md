@@ -9,14 +9,14 @@
 
 ## Introduce
 - 생성 버튼을 클릭하면 랜덤으로 명언이 생성됩니다.
-- 복사 버튼을 클릭하면 명언이 복사됩니다. (영,한 구분)
-- 영문 명언 API([goquotes](https://goquotes.docs.apiary.io/#reference/get-random-quote(s)/apiv1randomcount/get-random-quote(s)))에서 받아온 영문 데이터를 번역 API([kakao](https://developers.kakao.com/docs/latest/ko/translate/common))를 통해 한글로 번역하였습니다.
+- 복사 버튼을 클릭하면 명언이 복사됩니다.
+- 한글 명언 API를 사용하였습니다.
+- Webpack으로 번들링하였습니다.
 
 <br />
 
 ## API
-- Go quotes API : 영문 명언을 렌덤으로 가져올 수 있는 API
-- Kakao 번역 API : 번역 API
+- Quotes API : https://api.qwer.pw/docs/helpful_text
 
 <br />
 

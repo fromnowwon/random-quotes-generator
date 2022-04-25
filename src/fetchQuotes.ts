@@ -1,5 +1,5 @@
 export async function fetchQuotes () {
-	return await fetch("https://goquotes-api.herokuapp.com/api/v1/random?count=1")
+	return await fetch("https://api.qwer.pw/request/helpful_text?apikey=guest")
 		.then((res) => res.json())
 		.catch(error => error)
 }
